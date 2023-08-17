@@ -1,0 +1,288 @@
+/*  =====   Colors  ====    */
+:root {
+  --cswhite: #F5F5F5;
+  --csblack: #000019;
+  --csblue: #04023B;
+  --csgold: #EDBE6E;
+  --synthwavepink: #FF019A;
+  --synthwaveblue: #00F1FF;
+}
+
+@font-face {
+  font-family: "RobotoBlack";
+  src: url("../assets/fonts/Roboto-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "RobotoMed";
+  src: url("../assets/fonts/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "RobotoThin";
+  src: url("../assets/fonts/Roboto-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "JoustConThin";
+  src: url("../assets/fonts/PlanetJoustCondensedLight-L36w3.otf") format("opentype");
+}
+@font-face {
+  font-family: "PixelFont";
+  src: url("../assets/fonts/SuperLegendBoy-4w8Y.ttf") format("truetype");
+}
+@font-face {
+  font-family: "AtariFont";
+  src: url("../assets/fonts/AtariFontFullVersion-ZJ23.ttf") format("truetype");
+}
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  background-color: #000;
+}
+
+.container {
+  max-width: 800px;
+  height: 100vh;
+  margin: auto;
+  position: relative;
+}
+
+#first-name,
+#last-name {
+  width: 50%;
+  color: #EEE;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+}
+#first-name h2,
+#last-name h2 {
+  margin: 0;
+  font-family: RobotoMed;
+  font-size: 10rem;
+  line-height: 75%;
+}
+
+#first-name {
+  height: 50vh;
+  left: 0;
+  bottom: 0;
+}
+#first-name h2 {
+  transform-origin: top left;
+  transform: rotate(90deg) translateY(-100%);
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#last-name {
+  height: 67.5vh;
+  right: 0;
+  top: 0;
+}
+#last-name h2 {
+  text-align: right;
+  transform-origin: bottom right;
+  transform: rotate(-90deg) translateX(100%);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#role-rotator {
+  width: 65%;
+  height: 50vh;
+  padding: 24px 8px;
+  box-sizing: border-box;
+}
+
+#role-grid {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#role-grid div {
+  padding: 0 0.2rem;
+  color: #EEE;
+  font-family: RobotoThin;
+  font-size: 1.2rem;
+  transition: left ease-in-out 0.5s, top ease-in-out 0.5s;
+  position: absolute;
+}
+#role-grid .featured {
+  font-family: RobotoBlack;
+}
+
+#contact-box {
+  width: 60%;
+  height: 45vh;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#contact-box a {
+  font-family: RobotoBlack;
+  color: #EEE;
+}
+
+@media only screen and (min-width: 576px) {
+  #first-name h2,
+  #last-name h2 {
+    font-size: 12rem;
+  }
+  #role-grid div {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #first-name h2,
+  #last-name h2 {
+    font-size: 15rem;
+  }
+  #role-grid div {
+    font-size: 1.9rem;
+  }
+}
+/*  =====   Projects Page   =====   */
+#outrun-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+h1 {
+  font-family: JoustConThin;
+  text-align: center;
+  position: relative;
+  color: var(--synthwavepink);
+}
+
+#project-thumbnails {
+  max-width: 800px;
+  margin: 50vh 5% 0;
+  position: relative;
+}
+#project-thumbnails .project-thumbnail {
+  margin-bottom: 32px;
+  background-color: #000;
+  border: 6px solid black;
+}
+#project-thumbnails .project-thumbnail .inner-border {
+  padding: 6px;
+  border: 4px solid var(--synthwaveblue);
+}
+#project-thumbnails .project-thumbnail h2 {
+  font-size: 1.1rem;
+  font-family: AtariFont;
+  color: var(--synthwavepink);
+  margin-top: 0;
+}
+#project-thumbnails .project-thumbnail p, #project-thumbnails .project-thumbnail a {
+  font-size: 0.9rem;
+  font-family: PixelFont;
+  color: white;
+}
+#project-thumbnails .project-thumbnail a {
+  margin-right: 12px;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 880px) {
+  #project-thumbnails {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/*  =====   Case Study  =====   */
+#case-study {
+  position: relative;
+}
+#case-study #background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: var(--csblue);
+  top: 0;
+  z-index: -1000;
+}
+#case-study #background #background-svg {
+  width: 100%;
+  height: 100%;
+}
+#case-study #background #background-svg circle,
+#case-study #background #background-svg line {
+  stroke: var(--csgold);
+  stroke-width: 4px;
+  fill: var(--csblue);
+}
+#case-study header,
+#case-study footer {
+  text-align: center;
+  padding-top: 60px;
+  margin-bottom: 80px;
+}
+#case-study header h1, #case-study header h2,
+#case-study footer h1,
+#case-study footer h2 {
+  font-family: RobotoBlack;
+  color: var(--csgold);
+  margin: 0;
+}
+#case-study header a,
+#case-study footer a {
+  color: var(--csgold);
+}
+#case-study section.case-study-part {
+  max-width: 800px;
+  padding: 2%;
+  margin: auto;
+  margin-bottom: 200px;
+}
+#case-study section.case-study-part img {
+  border-radius: 8px;
+  max-width: 90%;
+}
+#case-study section.case-study-part .part-text {
+  background-color: var(--cswhite);
+  border-radius: 8px;
+  padding: 16px;
+  margin-left: 10%;
+  position: relative;
+  top: -24px;
+}
+#case-study section.case-study-part .part-text p {
+  font-size: 1.2rem;
+  font-family: RobotoMed;
+  color: var(--csblack);
+  margin: 0;
+}
+
+#projects-page footer a {
+  font-size: 0.8rem;
+  font-family: AtariFont;
+}
+
+footer nav ul {
+  padding: 0;
+  margin-bottom: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+footer nav ul li {
+  text-align: center;
+  margin: 12px;
+}
+footer nav ul li a {
+  color: white;
+}/*# sourceMappingURL=styles.css.map */
